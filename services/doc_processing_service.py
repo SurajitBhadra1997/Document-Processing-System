@@ -6,7 +6,7 @@ class DocProcessService:
         self.file_bytes = file_bytes
         self.extension=extension
 
-    def start(self):
+    async def start(self):
         pipeline = DocProcessPipeline()
 
         return pipeline.process(self.file_bytes,self.extension)

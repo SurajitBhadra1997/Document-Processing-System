@@ -5,7 +5,7 @@ class DocProcess:
     def __init__(self):
         pass
 
-    def process_doc(self, file_bytes: bytes,extension:str):
+    async def process_doc(self, file_bytes: bytes,extension:str):
         service = DocProcessService(file_bytes,extension)
 
-        return service.start()
+        return await service.start()
